@@ -28,12 +28,12 @@ public class FriendAdapterClass extends ArrayAdapter {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
         if (listItem == null)
-            listItem = LayoutInflater.from(mContext).inflate(R.layout.friends_list_item, parent, false);
+            listItem = LayoutInflater.from(mContext).inflate(R.layout.friends_listview, parent, false);
 
         User currentUser = userList.get(position);
 
         ImageView image = (ImageView) listItem.findViewById(R.id.iv_profile_pic);
-        image.setImageResource(currentUser.getmProfilePicture());
+        image.setImageResource((int) currentUser.getmProfilePicture());
 
         TextView name = (TextView) listItem.findViewById(R.id.tv_username);
         name.setText(currentUser.getmUsername());

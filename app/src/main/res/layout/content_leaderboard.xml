@@ -19,6 +19,13 @@
             android:background="?attr/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
+        <ListView
+            android:layout_marginTop="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_leaderboard_list">
+        </ListView>
+
     </FrameLayout>
 
 

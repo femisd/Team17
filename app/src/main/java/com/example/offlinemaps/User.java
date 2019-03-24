@@ -3,8 +3,13 @@ package com.example.offlinemaps;
 public class User {
 
     private String mUsername;
-    private int mProfilePicture;
+    private long mProfilePicture;
     private String mLocation;
+    private int mSteps;
+    private double mCaloriesBurned;
+
+    public User() {
+    }
 
     public User(int profilePicture, String username, String location) {
         mProfilePicture = profilePicture;
@@ -12,11 +17,19 @@ public class User {
         mLocation = location;
     }
 
+    public User(int profilePicture, String username, String location, int steps, double caloriesBurned) {
+        mProfilePicture = profilePicture;
+        mUsername = username;
+        mLocation = location;
+        mSteps = steps;
+        mCaloriesBurned = caloriesBurned;
+    }
+
     public String getmUsername() {
         return mUsername;
     }
 
-    public int getmProfilePicture() {
+    public long getmProfilePicture() {
         return mProfilePicture;
     }
 
@@ -24,11 +37,28 @@ public class User {
         return mLocation;
     }
 
+    public int getmSteps() {
+        return mSteps;
+    }
+
+
+    public double getmCaloriesBurned() {
+        return mCaloriesBurned;
+    }
+
+    public void setmSteps(int mSteps) {
+        this.mSteps = mSteps;
+    }
+
+    public void setmCaloriesBurned(double mCaloriesBurned) {
+        this.mCaloriesBurned = mCaloriesBurned;
+    }
+
     public void setmUsername(String mUsername) {
         this.mUsername = mUsername;
     }
 
-    public void setmProfilePicture(int mProfilePicture) {
+    public void setmProfilePicture(long mProfilePicture) {
         this.mProfilePicture = mProfilePicture;
     }
 
